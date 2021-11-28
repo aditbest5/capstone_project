@@ -44,3 +44,5 @@ class Question extends HTMLElement{
         `;
     }
 }
+
+customElements.define("question-item",Question);
