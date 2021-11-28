@@ -28,5 +28,10 @@ class QuestionSet extends HTMLElement{
         });
     }
 
-    
+
+    get answers(){
+        return this.answers;
+    }
+
+
 }

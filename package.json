@@ -1,0 +1,23 @@
+{
+  "name": "capstone_sib",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snifee/capstone_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snifee/capstone_project/issues"
+  },
+  "homepage": "https://github.com/snifee/capstone_project#readme"
+}
