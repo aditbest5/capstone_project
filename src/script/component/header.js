@@ -8,21 +8,36 @@ class Header extends HTMLElement{
         this.innerHTML = `
             <style>
                 header{
-                    background-color: gray;
+                    background-color: black;
+                    height: 3em;
                     margin: auto;
+                }
+                h1{
+
+                }
+                ul li{
+                    display:inline-block;
+                    color: white;
+                    margin: auto;
+                }
+                li{
+                    padding: 10px;
                 }
             </style>
             <header>
                 <div class="row">
                     <div class="col">
-                        <h1>Make your team</h1>
+                        <div class="">
+                            <ul>
+                                <li>Get Code</li>
+                                <li>Have a code</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col ">
                     </div>
                     <div class="col">
-                        2 of 2
-                    </div>
-                    <div class="col">
-                    <button type="submit" class="btn btn-primary">Join</button>
-                        
+                        <a href="#user">User</a>
                     </div>
                 </div>
             </header>
