@@ -1,13 +1,11 @@
 class Header extends HTMLElement{
-    constructor(){
-        super();
-        this._shadowRoot = this.attachShadow({mode: "open"});
-        this.render();
-    }
+    // constructor(){
+    //     // this._shadowRoot = this.attachShadow({mode: 'open'});
+    //     this.render();
+    // }
 
-
-    render(){
-        this._shadowRoot.innerHTML = `
+    connectedCallback(){
+        this.innerHTML = `
             <style>
                 header{
                     background-color: gray;
@@ -23,6 +21,7 @@ class Header extends HTMLElement{
                         2 of 2
                     </div>
                     <div class="col">
+                    <button type="submit" class="btn btn-primary">Join</button>
                         
                     </div>
                 </div>

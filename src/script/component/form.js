@@ -22,3 +22,6 @@ class Form extends HTMLElement{
         `;
     }
 }
+
+
+customElements.define("form-set",Form);

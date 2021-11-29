@@ -1,10 +1,10 @@
 import "../component/question.js";
 
 class QuestionSet extends HTMLElement{
-    constructor(){
-        super();
-        this._shadowRoot = this.attachShadow({mode: 'open'});
-    }
+    // constructor(){
+    //     super();
+    //     this._shadowRoot = this.attachShadow({mode: 'open'});
+    // }
 
     set questions(questions){
         this.questions = questions;
@@ -12,8 +12,8 @@ class QuestionSet extends HTMLElement{
 
 
 
-    render(){
-        this._shadowRoot.innerHTML = `
+    connectedCallback(){
+        this.innerHTML = `
             <div class="row">
                 <form id="questionForm">
                     <div id="question-list"></div>

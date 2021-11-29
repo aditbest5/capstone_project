@@ -1,9 +1,9 @@
 class Question extends HTMLElement{
-    constructor(){
-        super();
+    // constructor(){
+    //     super();
 
-        this._shadowRoot = this.attachShadow({mode:"open"});
-    }
+    //     this._shadowRoot = this.attachShadow({mode:"open"});
+    // }
 
 
     set question(question){
@@ -14,8 +14,8 @@ class Question extends HTMLElement{
         this.questionNumber = questionNumber;
     }
 
-    render(){
-        this._shadowRoot.innerHTML = `
+    connectedCallback(){
+        this.innerHTML = `
             <div class="mb-3">
                 <label for="question-${this.questionNumber}" class="form-label">${this.question}</label>
                 <div class="answer-${this.questionNumber}">
