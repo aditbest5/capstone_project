@@ -23,21 +23,35 @@ class Header extends HTMLElement{
                 li{
                     padding: 10px;
                 }
+
+                li a{
+                    text-decoration: none;
+                    color: white;
+                }
+
+                #user{
+                    padding: 10px;
+                    margin: auto;
+                    display: inline-block;
+                    color: white;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
             </style>
             <header>
                 <div class="row">
                     <div class="col">
                         <div class="">
                             <ul>
-                                <li>Get Code</li>
-                                <li>Have a code</li>
+                                <li><a href="#code">Main</a></li>
+                                <li><a href="#code2">Add Person</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col ">
                     </div>
                     <div class="col">
-                        <a href="#user">User</a>
+                        <a href="#user1" id="user">User</a>
                     </div>
                 </div>
             </header>

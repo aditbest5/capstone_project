@@ -3,3 +3,14 @@
 *{
     font-family: 'Quicksand', sans-serif;
 }
+
+body{
+    background-color: rgb(255, 255, 123);
+}
+
+main{
+    background-color: white;
+    width: 80%;
+    height: 80%;
+    display: flex;
+}
