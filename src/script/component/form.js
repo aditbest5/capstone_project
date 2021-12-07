@@ -10,7 +10,7 @@ class Form extends HTMLElement{
                 margin: auto;
             }
         </style>
-        <form id="registrasi" method="POST">
+        <form id="registrasi">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputName">Name</label>
@@ -23,6 +23,12 @@ class Form extends HTMLElement{
 
         document.querySelector("#registrasi").addEventListener("submit", (event)=>{
             this.value1 = document.getElementById("inputName").value;
+            event.preventDefault();
+
+            const tempData = JSON.stringify({name: this.value1});
+            localStorage.setItem("TEMP_DATA",tempData);
+
+            location.hash = "#question";
         });
 
     }

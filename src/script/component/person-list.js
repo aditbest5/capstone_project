@@ -1,29 +1,39 @@
-import './person-item.js'
-
 class PersonList extends HTMLElement{
-
 
     set students(students){
         this._students = students;
         this.render();
     }
 
-
     render(){
-        this.innerHTML=`
+        
+        
+        if (this._students.length === 0) {
+            this.innerHTML=`No Person`;
             
-        `;
-
-        this._students.forEach(student => {
-            const personItem = document.createElement('person-item');
+        }else{
             
-            // console.log(student);
-            personItem.identity = student;
+            this._students.forEach(student => {
+                const div = document.createElement('div');
+                div.innerHTML=`
+                    <style>
+                        .div-person{
+                            padding: 10px;
+                            border: 1px solid black;
+                            margin: 5px;
+                            border-radius: 5px;
+                        }
 
-            this.appendChild(personItem);
-        });
-
-
+                    </style>
+                    <div class="div-person" id="$ {this.identity.id}">
+                        <h2>${student.name}</h2>
+                        <h3>${student.personality}</h3>
+                    </div>
+                `;
+    
+                this.appendChild(div);
+            });
+        }
     }
 }
 

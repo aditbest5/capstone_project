@@ -6,7 +6,7 @@ class BrowserStorage{
     }
 
     static saveDataPerson(data){
-        const dataOnStorage = this.getAllData();
+        let dataOnStorage = this.getAllData();
         dataOnStorage = JSON.parse(dataOnStorage);
 
         if (dataOnStorage == null) {
@@ -20,7 +20,7 @@ class BrowserStorage{
     }
 
     static deleteItem(id){
-        const dataOnStorage = this.getAllData();
+        let dataOnStorage = this.getAllData();
         dataOnStorage = JSON.parse(dataOnStorage);
 
         for (let i = 0; i < dataOnStorage.length; i++) {

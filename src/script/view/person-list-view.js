@@ -7,7 +7,7 @@ function personListView(){
     personList.students = students;
     // personList.students = BrowserStorage.getAllData();
 
-//    console.log(students[0].name);
+
 
 
     return personList;

@@ -1,24 +1,23 @@
+import { event } from "jquery";
 import "./question-item.js";
 
 class QuestionForm extends HTMLElement{
 
     set questions(questions){
         this._questions=questions;
-        this.render();
     }
 
-    render(){
+    connectedCallback(){
         this.innerHTML = `
             <style>
     
             </style>
-            <div class="row">
                 <form id="questionForm">
                     <div class="question-list"></div>
 
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
-            </div>
+           
         `;
 
         this._questions.forEach(question => {
@@ -27,21 +26,37 @@ class QuestionForm extends HTMLElement{
                 this.getElementsByClassName("question-list")[0].appendChild(item);
         });
 
-        document.querySelector('#questionForm').addEventListener('submit',(event) => {
+
+        document.querySelector('#questionForm').addEventListener("submit", (event) =>{
+            this.answers = [];
             this._questions.forEach(q => {
-                const answ = document.getElementById(q.id).value;
-                this.answers.push(answ);
+               
+                const answ =  document.querySelector('input[name="'+ q.id +'"]:checked').value;
+                this.answers.push(parseInt(answ));
             });
             
+            
             event.preventDefault();
-            console.log(this.answers);
 
-        });
-    }
+            let tempData = localStorage.getItem("TEMP_DATA");
 
+            if (tempData == null) {
+                alert("Data Hilang, Kembali ke masukkan data");
 
-    get answers(){
-        return this.answers;
+                location.hash = "#add-person";
+            }else{
+
+                tempData = JSON.parse(tempData);
+    
+                tempData["answers"] = this.answers;
+    
+                console.log(tempData);
+    
+                tempData = JSON.stringify(tempData);
+    
+                localStorage.setItem("TEMP_DATA",tempData);
+            }
+        })
     }
 
 

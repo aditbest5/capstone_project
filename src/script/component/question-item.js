@@ -17,7 +17,7 @@ class Question extends HTMLElement{
                 }
             </style>
             <div class="mb-3 question">
-                <label for="question-${this._question.id}" class="form-label">${this._question.question}</label>
+                <label for="question-${this._question.id}"  class="form-label">${this._question.question}</label>
                 <div class="answer-${this._question.id}">
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="${this._question.id}" id="inlineRadio1" value="1">

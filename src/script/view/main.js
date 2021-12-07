@@ -29,14 +29,21 @@ function main() {
 
     window.addEventListener("hashchange", function() {
         if (location.hash === "#main") {
+
             removeAllChild(container)
             container.appendChild(personListView());
+        
         }else if (location.hash === "#add-person") {
+            
             removeAllChild(container);
-
             container.appendChild(addPerson());
+        
+        }else if (location.hash === "#question") {
+
+            removeAllChild(container);
+            container.appendChild(questionForm());
+        
         }
-        console.log(location.hash);
     });
     
 
