@@ -10,7 +10,7 @@ class Form extends HTMLElement{
                 margin: auto;
             }
         </style>
-        <form id="registrasi">
+        <form id="registrasi" method="POST">
             <div class="form-row">
                 <div class="form-group col-md-6">
                     <label for="inputName">Name</label>
@@ -23,7 +23,6 @@ class Form extends HTMLElement{
 
         document.querySelector("#registrasi").addEventListener("submit", (event)=>{
             this.value1 = document.getElementById("inputName").value;
-            //Add url
         });
 
     }

@@ -43,15 +43,14 @@ class Header extends HTMLElement{
                     <div class="col">
                         <div class="">
                             <ul>
-                                <li><a href="#code">Main</a></li>
-                                <li><a href="#code2">Add Person</a></li>
+                                <li><a href="#main">Main</a></li>
+                                <li><a href="#add-person">Add Person</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col ">
                     </div>
                     <div class="col">
-                        <a href="#user1" id="user">User</a>
                     </div>
                 </div>
             </header>

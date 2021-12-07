@@ -3,9 +3,10 @@ import "../component/form.js";
 import BrowserStorage from "../data/data.js";
 
 function addPerson(){
-    const personList = document.createElement("form-set");
+    const formElement = document.createElement("form-set");
 
-    return personList;
+
+    return formElement;
 }
 
 export default addPerson;

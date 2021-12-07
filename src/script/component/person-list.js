@@ -16,7 +16,8 @@ class PersonList extends HTMLElement{
 
         this._students.forEach(student => {
             const personItem = document.createElement('person-item');
-
+            
+            // console.log(student);
             personItem.identity = student;
 
             this.appendChild(personItem);
@@ -25,3 +26,5 @@ class PersonList extends HTMLElement{
 
     }
 }
+
+customElements.define("person-list",PersonList);
