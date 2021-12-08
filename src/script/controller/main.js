@@ -1,8 +1,8 @@
-import addPerson from "./add-person-view.js";
-import questionForm from "./questions-form-view.js";
+import addPerson from "../view/add-person-view.js";
+import questionForm from "../view/questions-form-view.js";
 import "../component/form.js";
 import BrowserStorage from "../data/data.js";
-import personListView from "./person-list-view.js";
+import personListView from "../view/person-list-view.js";
 
 function removeAllChild(node) {
     while (node.lastElementChild) {
@@ -19,7 +19,7 @@ function main() {
     document.body.appendChild(mainTag);
 
     const container = document.createElement("div");
-    container.setAttribute("class","container")
+    container.setAttribute("class","container-sm")
 
 
     // const Form = document.createElement("form-set");

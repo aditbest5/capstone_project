@@ -4,20 +4,16 @@ class Form extends HTMLElement{
 
     connectedCallback(){
         this.innerHTML = `
-        <style>
-            #registrasi{
-                padding: 10px;
-                margin: auto;
-            }
-        </style>
+
         <form id="registrasi">
-            <div class="form-row">
-                <div class="form-group col-md-6">
-                    <label for="inputName">Name</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Name">
+            <div class="row mb-3">
+                <h2>Insert Your Name</h2>
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                <input type="text" class="form-control" placeholder="Input Name" id="inputName" required>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Join</button>
+            <button type="submit" class="btn btn-dark">Go!</button>
         </form>
         `;
 

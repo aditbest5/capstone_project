@@ -6,6 +6,14 @@ class PersonList extends HTMLElement{
     }
 
     render(){
+        this.innerHTML=`
+        <style>
+            #title{
+                padding: 5px;
+            }
+        </style>
+        <h2 id="title">Person Listed</h2>
+        `;
         
         
         if (this._students.length === 0) {
@@ -18,16 +26,16 @@ class PersonList extends HTMLElement{
                 div.innerHTML=`
                     <style>
                         .div-person{
-                            padding: 10px;
-                            border: 1px solid black;
+                            padding: 5px;
+                            border: 1px solid rgba(0, 0, 0, 0.212);
                             margin: 5px;
                             border-radius: 5px;
                         }
 
                     </style>
-                    <div class="div-person" id="$ {this.identity.id}">
-                        <h2>${student.name}</h2>
-                        <h3>${student.personality}</h3>
+                    <div class="row div-person" id="$ {this.identity.id}">
+                        <h3>${student.name}</h3>
+                        <h4>${student.personality}</h4>
                     </div>
                 `;
     

@@ -11,6 +11,8 @@ class Header extends HTMLElement{
                     background-color: black;
                     height: 3em;
                     margin: auto;
+                    position: sticky;
+                    top: 0;
                 }
                 h1{
 
@@ -39,20 +41,18 @@ class Header extends HTMLElement{
                 }
             </style>
             <header>
-                <div class="row">
+                <nav>
                     <div class="col">
-                        <div class="">
-                            <ul>
-                                <li><a href="#main">Main</a></li>
-                                <li><a href="#add-person">Add Person</a></li>
-                            </ul>
-                        </div>
+                        <ul>
+                            <li><a href="#main">Main</a></li>
+                            <li><a href="#add-person">Add Person</a></li>
+                        </ul>
                     </div>
                     <div class="col ">
                     </div>
                     <div class="col">
                     </div>
-                </div>
+                </nav>
             </header>
         `;
     }

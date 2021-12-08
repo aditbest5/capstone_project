@@ -13,9 +13,10 @@ class QuestionForm extends HTMLElement{
     
             </style>
                 <form id="questionForm">
+                    <h2>Answer the Question Below</h2>
                     <div class="question-list"></div>
 
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-dark btn-primary">Submit</button>
                 </form>
            
         `;
@@ -31,7 +32,13 @@ class QuestionForm extends HTMLElement{
             this.answers = [];
             this._questions.forEach(q => {
                
-                const answ =  document.querySelector('input[name="'+ q.id +'"]:checked').value;
+                let answ =  document.querySelector('input[name="'+ q.id +'"]:checked').value;
+
+                try {
+                    answ = parseInt(answ);
+                } catch (error) {
+                    answ = 0;
+                }
                 this.answers.push(parseInt(answ));
             });
             
@@ -55,7 +62,10 @@ class QuestionForm extends HTMLElement{
                 tempData = JSON.stringify(tempData);
     
                 localStorage.setItem("TEMP_DATA",tempData);
+
+                location.hash = "#main";
             }
+
         })
     }
 

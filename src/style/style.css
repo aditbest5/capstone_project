@@ -9,8 +9,22 @@ body{
 }
 
 main{
+    margin: 50px;
+}
+
+.container-sm{
+    border: 1px solid rgba(0, 0, 0, 0.212);
+    border-radius: 5px;
+    padding: 50px;
     background-color: white;
-    width: 80%;
-    height: 80%;
-    display: flex;
+}
+
+.btn0{
+    margin: 5px;
+}
+
+@media  screen and (min-width: 800px) {
+    .container-sm{
+        width: 55%;
+    }
 }
