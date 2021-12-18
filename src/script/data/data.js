@@ -2,7 +2,9 @@ const STORAGE_KEY = "APP_DATA";
 
 class BrowserStorage{
     static getAllData(){
-        return localStorage.getItem(STORAGE_KEY);
+         let  result = localStorage.getItem(STORAGE_KEY);
+         result = JSON.parse(result);
+         return result;
     }
 
     static saveDataPerson(data){
@@ -21,7 +23,6 @@ class BrowserStorage{
 
     static deleteItem(id){
         let dataOnStorage = this.getAllData();
-        dataOnStorage = JSON.parse(dataOnStorage);
 
         for (let i = 0; i < dataOnStorage.length; i++) {
             if (dataOnStorage[i].id === id) {
